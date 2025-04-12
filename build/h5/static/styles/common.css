@@ -1,0 +1,33 @@
+/* 性能优化相关样式 */
+.optimize-render {
+  will-change: auto;
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  perspective: 1000;
+}
+
+/* 文字渲染优化 */
+.optimize-text {
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* 按钮点击效果优化 */
+.button-effect {
+  transition: transform 0.1s ease, opacity 0.1s ease;
+}
+.button-effect:active {
+  transform: scale(0.98);
+  opacity: 0.9;
+}
+
+/* 页面转场动画 */
+.page-transition-enter-active,
+.page-transition-leave-active {
+  transition: opacity 0.3s;
+}
+.page-transition-enter,
+.page-transition-leave-to {
+  opacity: 0;
+} 
